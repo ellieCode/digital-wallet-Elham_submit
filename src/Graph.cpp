@@ -1,8 +1,6 @@
 /*
  * Graph.cpp
- *
- *  Created on: Nov 7, 2016
- *      Author: Elham sakhaee
+ * Implementation of functions for searching the Graph
  */
 
 #include "Graph.h"
@@ -14,7 +12,6 @@ Graph::Graph(AdjacencyList* al){
 
 //evaluate whether src(id1) and dest(id2) are within k distance from each other
 //Note: k=1 means the are friends, k=2 means friend of friends
-//We check the output of k=1 with the one from Adjacency List
 bool Graph::BFS(unsigned int src, unsigned int dest, int k)
 {
 	//insert a dummy node to keep track of level change
@@ -58,7 +55,8 @@ bool Graph::BFS(unsigned int src, unsigned int dest, int k)
 			// If a adjacent has not been visited, then mark it visited
 			// and enqueue it
 			if(depth<k){
-				vector<unsigned int> ngbrs(adjList->at(src)); //copy the list into vector to avoid accessing the map every time
+				//copy the list into vector to avoid accessing the map every time
+				vector<unsigned int> ngbrs(adjList->at(src)); 
 				for(i = ngbrs.begin(); i !=  ngbrs.end(); ++i)
 					//for(int j = 0; j < ngbrs.size(); j++)
 				{
@@ -109,8 +107,8 @@ void Graph::checkTrusted(string infilename, string outfilename, int depth){
 				output.writeLine("trusted");
 			else
 				output.writeLine("unverified");
-		}else{										//If this id has never had a transaction before
-			if(id1 == id2)   						//but transaction with oneself is always trusted
+		}else{				//If this id has never had a transaction before								
+			if(id1 == id2)   	//but transaction with oneself is always trusted
 				output.writeLine("trusted");
 			else
 				output.writeLine("unverified");
