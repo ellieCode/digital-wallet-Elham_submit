@@ -1,8 +1,8 @@
 /*
  * adjList.cpp
- *
- *  Created on: Nov 6, 2016
- *      Author: Ellie
+ * Implements Graph as Adjacency List
+ * Reads in the batch_payment file and creates AdjList 
+ * AdjList is implemented as unordered_map
  */
 
 #include "AdjacencyList.h"
