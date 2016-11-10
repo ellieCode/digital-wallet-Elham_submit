@@ -1,20 +1,17 @@
 /*
  * adjList.h
- *
- *  Created on: Nov 6, 2016
- *      Author: Ellie
  */
 
 #ifndef ADJACENCYLIST_H_
 #define ADJACENCYLIST_H_
 
-#include <iostream>		//std::cerr
-#include <vector>		//List of connected nodes
-#include <string>	    //std::string, std::stoi
-#include <unordered_map>//AdjList container
-#include <sstream>      // std::istringstream
-#include <fstream>      // std::ofstream
-#include <algorithm>    //std::find
+#include <iostream>	
+#include <vector>		
+#include <string>	   
+#include <unordered_map>
+#include <sstream>      
+#include <fstream>     
+#include <algorithm>   
 
 #include "CSVhandler.h"
 
