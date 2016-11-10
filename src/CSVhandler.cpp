@@ -1,24 +1,26 @@
-
+/*
+* Implementation of utility functions for File I/O handling
+*/
 #include "CSVhandler.h"
 
 CSVhandler::CSVhandler(string filename, char operation) {
-	if(operation == 'r'){ 								//input file for reading
+	if(operation == 'r'){ 				//input file for reading
 		//infile = ifstream(filename);
 		//if(!infile){
-        //This line was added when checking compilation on Linux
+        	//This line was added when checking compilation on Linux
 		infile.open(filename.c_str(), ifstream::in);
-		if(!infile.is_open()){                          //if there was an issue opening the input file
+		if(!infile.is_open()){                  //if there was an issue opening the input file
 			cerr << "Input File  " << filename <<" could not be opened! " << endl;
 		}
 	}
-	else if (operation == 'w'){  						//output file for writing
+	else if (operation == 'w'){  			//output file for writing
 		//outfile= ofstream(filename);
 		//if(!outfile){
 		outfile.open(filename.c_str(), ofstream::out);
-		if(!outfile.is_open()){                         //if there was an issue opening the output file
+		if(!outfile.is_open()){                   //if there was an issue opening the output file
 			cerr << "Output File  " << filename <<" could not be opened! " << endl;
 		}
-	}else{												//if the Constructor wasn't called properly
+	}else{						   //if the Constructor wasn't called properly
 		cerr<< "operation must be read or write" <<endl;
 	}
 }
