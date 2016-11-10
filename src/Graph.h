@@ -1,8 +1,5 @@
 /*
  * Graph.h
- *
- *  Created on: Nov 7, 2016
- *      Author: Ellie
  */
 
 #ifndef GRAPH_H_
