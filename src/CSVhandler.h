@@ -1,18 +1,17 @@
 /*
  * CSVhandler.h
- *
- *  Created on: Nov 8, 2016
- *      Author: Ellie
+ * Header for file I/O handling
+ * 
  */
 
 #ifndef CSVHANDLER_H_
 #define CSVHANDLER_H_
 
-#include <iostream>     //for std::cerr
+#include <iostream>    
 #include <vector>
 #include <string>
-#include <sstream>      // std::istringstream
-#include <fstream>      // std::ofstream
+#include <sstream>     
+#include <fstream>      
 
 using  namespace std;
 
