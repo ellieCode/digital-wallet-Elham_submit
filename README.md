@@ -12,9 +12,12 @@ Please note that several features of c++11 have been used, therefore, for proper
 
 ###Assumptions
 (1) We assumed that transaction between a person and himself/herself is trusted, no matter it's included in the batch_payment.txt or not.
+
 (2) We assumed that ids are numbers, basically valid unsigned integer numbers, however, the implementation can be readily employed to any other object type.
+
 (3) We assumed that transactions are valid, therefore, we did not check for data extracted from the csv/txt file. We assumed (as promised in the challenge Description)
     that entries are valid.
+
 (4) we assumed that the line description of each transaction is not extremely huge. Therefore, reading lines will fit into memory.
 
 
@@ -47,7 +50,8 @@ This class is merely a utility wrapper for I/O and error checking of file operat
 
 
 ###Output
-There will be three outputs for features 1 to 3, named output1.txt, output2.txt, output3.txt, 
+There will be three outputs for features 1 to 3, named output1.txt, output2.txt, output3.txt. 
+We added our results for Feature 2 as output2.txt (~26MB). 
 The directory structure and the format of output was tested under Unix and Linux and the 3 test cases in insight_testsuite folder were passed.
 
 #Notes
